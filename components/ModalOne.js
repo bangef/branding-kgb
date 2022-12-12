@@ -37,7 +37,7 @@ export default function ModalOne({ title, description, isOpen1, setIsOpen1 }) {
 							{description}
 						</Dialog.Description>
 						<Button type="secondary" onClick={() => setIsOpen1(false)}>
-							Keluar
+							Out
 						</Button>
 					</Dialog.Panel>
 				</div>

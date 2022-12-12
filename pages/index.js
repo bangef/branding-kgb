@@ -6,16 +6,14 @@ import Client from "../components/Client";
 import CompanyProfile from "../components/CompanyProfile";
 import Footer from "../components/Footer";
 import Services from "../components/Services";
-import ToTop from "../components/ToTop";
+import ToTop from "../components/ToTop.js";
 import Head from "next/head";
 import { useRef, useState } from "react";
-import dataConstant from "../constant/data";
-import Button from "../components/Button";
-import ModalOne from "../components/ModalOne";
-import ModalTwo from "../components/ModalTwo";
+import Button from "../components/Button.js";
+import ModalOne from "../components/ModalOne.js";
+import ModalTwo from "../components/ModalTwo.js";
 
 export default function index() {
-	const { modals } = dataConstant;
 	const home = useRef(null);
 	const aboutus = useRef(null);
 	const clients = useRef(null);

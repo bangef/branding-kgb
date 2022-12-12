@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { useEffect, useState } from "react";
 import dataConstant from "../constant/data";
 
 export default function ToTop() {

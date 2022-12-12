@@ -37,7 +37,7 @@ export default function ModalTwo({ title, description, isOpen2, setIsOpen2 }) {
 							{description}
 						</Dialog.Description>
 						<Button type="primary" onClick={() => setIsOpen2(false)}>
-							Keluar
+							Out
 						</Button>
 					</Dialog.Panel>
 				</div>
