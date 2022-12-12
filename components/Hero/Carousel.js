@@ -12,7 +12,12 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Autoplay, Pagination, EffectFade, Scrollbar } from "swiper";
-export default function Carousel({ delay, images, enabled }) {
+export default function Carousel({ delay, enabled }) {
+	const images = [
+		{ source: heroOne, alternate: "Hero banner 1" },
+		{ source: heroTwo, alternate: "Hero banner 2" },
+		{ source: heroThree, alternate: "Hero banner 3" },
+	];
 	return (
 		<Swiper
 			spaceBetween={0}
@@ -28,15 +33,13 @@ export default function Carousel({ delay, images, enabled }) {
 			modules={[Autoplay, Pagination, EffectFade, Scrollbar]}
 			className="mySwiper"
 		>
-			<SwiperSlide>
-				<Image src={heroOne} alt="testing" fill placeholder="blur" />
-			</SwiperSlide>
-			<SwiperSlide>
-				<Image src={heroTwo} alt="testing" fill placeholder="blur" />
-			</SwiperSlide>
-			<SwiperSlide>
-				<Image src={heroThree} alt="testing" fill placeholder="blur" />
-			</SwiperSlide>
+			{images.map(({ source, alternate }) => {
+				return (
+					<SwiperSlide key={`${alternate}`}>
+						<Image src={source} alt={alternate} fill placeholder="blur" />
+					</SwiperSlide>
+				);
+			})}
 		</Swiper>
 	);
 }

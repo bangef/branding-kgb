@@ -15,7 +15,7 @@ export default function index(props) {
 					<h1 className="text-4xl font-bold text-black-cstm-1 font-poopins">
 						Our Clients
 					</h1>
-					<p className="w-full mt-4 text-base antialiased tracking-wider text-start font-poopins">
+					<p className="w-full mt-4 antialiased font-light tracking-wider text-start sm:text-justify text-slate-500">
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
 						ipsam? Tenetur laudantium.
 					</p>

@@ -6,7 +6,7 @@ const { menu, medsos, ecommerce } = dataConstant.footer;
 
 export default function index() {
 	return (
-		<footer className="p-4 mx-auto bg-white sm:p-6 font-poopins max-w-7xl">
+		<footer className="p-4 mx-auto bg-white sm:p-6 max-w-7xl">
 			<div className="md:flex md:justify-between">
 				<div className="w-full pr-0 mb-6 md:pr-4 md:w-3/4 md:mb-0">
 					<Link href="/" className="flex items-center">
@@ -17,11 +17,11 @@ export default function index() {
 							width={30}
 							height={30}
 						/>
-						<span className="self-center text-2xl font-bold text-black whitespace-nowrap">
+						<span className="self-center text-2xl font-bold text-black-cstm-1 whitespace-nowrap font-poopins">
 							KGB
 						</span>
 					</Link>
-					<p className="mt-2 text-sm text-gray-400">
+					<p className="mt-4 antialiased font-light tracking-wider text-start text-slate-500">
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quo,
 						necessitatibus quia inventore laboriosam labore quidem eum alias
 						porro iusto!
@@ -33,15 +33,13 @@ export default function index() {
 						referrerPolicy="no-referrer-when-downgrade"
 					></iframe>
 				</div>
-				<div className="grid w-full grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+				<div className="grid w-full grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 sm:pl-8">
 					<div>
-						<h2 className="mb-6 text-sm font-semibold text-gray-500 uppercase">
-							Menu
-						</h2>
+						<h2 className="mb-6 font-semibold text-gray-500 uppercase">Menu</h2>
 						<ul className="text-gray-600 dark:text-gray-400">
 							{menu.map(({ name, href }, index) => (
 								<li className="mb-4" key={index}>
-									<Link href={href} className="hover:text-blue-900">
+									<Link href={href} className="hover:text-black-cstm-1">
 										{name}
 									</Link>
 								</li>
