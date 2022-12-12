@@ -4,9 +4,11 @@ export default function index(props) {
 			className="grid grid-cols-1 px-4 py-16 mx-auto xl:container"
 			ref={props.directTo}
 		>
-			<div className="text-black-cstm-1 font-poopins">
-				<h1 className="text-4xl font-bold text-center">Company Profile</h1>
-				<p className="w-full mx-auto mt-4 antialiased tracking-wider text-center md:w-3/4">
+			<div className="">
+				<h1 className="text-4xl font-bold text-center text-black-cstm-1">
+					Company Profile
+				</h1>
+				<p className="w-full mt-4 antialiased font-light tracking-wider text-center text-slate-500">
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
 					ipsam? Tenetur laudantium tempora sunt eos! Vero officiis veritatis
 					aperiam nihil, esse alias similique voluptatibus expedita eos mollitia

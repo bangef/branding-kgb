@@ -19,7 +19,7 @@ export default function index(props) {
 			<section className="grid grid-cols-1 px-4 py-16 mx-auto md:grid-cols-3 xl:container">
 				<div className="xl:mr-10 lg:mr-8 md:mr-4 text-black-cstm-1">
 					<h1 className="text-4xl font-bold font-poopins">About Us</h1>
-					<p className="mt-4 antialiased tracking-wider text-start sm:text-justify font-poopins">
+					<p className="mt-4 antialiased font-normal tracking-wider text-start sm:text-justify">
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
 						ipsam? Tenetur laudantium tempora sunt eos! Vero officiis veritatis
 						aperiam nihil, esse alias similique voluptatibus expedita eos
