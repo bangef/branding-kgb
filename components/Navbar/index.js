@@ -4,6 +4,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
 import dataConstant from "../../constant/data";
+import scrollToSection from "../../utils/index";
 
 function classNames(...classes) {
 	return classes.filter(Boolean).join(" ");
@@ -13,13 +14,6 @@ export default function index(props) {
 	const navigation = dataConstant.navbar.map((elemen, index) => {
 		return { ...elemen, directs: props.directs[index] };
 	});
-
-	const scrollToSection = (elementRef) => {
-		window.scrollTo({
-			top: elementRef.current.offsetTop - 64,
-			behavior: "smooth",
-		});
-	};
 
 	return (
 		<Menu

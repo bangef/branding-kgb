@@ -1,10 +1,6 @@
-import Button from "../Button";
-import ImageOc from "./ImageOc";
-import dataConstant from "../../constant/data";
+import Images from "./Images";
 
-export default function index(props) {
-	const { directTo, children } = props;
-	const { oc } = dataConstant;
+export default function index({ directTo, children }) {
 	return (
 		<article
 			ref={directTo}
@@ -26,15 +22,7 @@ export default function index(props) {
 			</div>
 
 			<div className="grid justify-between w-full grid-cols-3 gap-2 mt-10">
-				{oc.map((elemen, index) => {
-					return (
-						<ImageOc
-							key={index}
-							path={elemen.path}
-							imageName={elemen.imageName}
-						/>
-					);
-				})}
+				<Images />
 			</div>
 		</article>
 	);

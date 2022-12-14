@@ -42,7 +42,7 @@ export default function index() {
 				/>
 				<meta name="keywords" content="lorem1, lorem2, lorem3, lorem4" />
 				<meta name="robots" content="index, follow" />
-				<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+				<meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
 				<meta name="language" content="English" />
 				{/* <!-- Open Graph / Facebook --> */}
 				<meta property="og:type" content="website" />
@@ -99,7 +99,7 @@ export default function index() {
 				description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum enim inventore ab eos similique? Facilis commodi quasi distinctio eum voluptate."
 			/>
 			<ToTop />
-			<Footer />
+			<Footer directs={allDirectTo} />
 		</>
 	);
 }

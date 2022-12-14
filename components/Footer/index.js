@@ -1,10 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import dataConstant from "../../constant/data";
+import scrollToSection from "../../utils/index";
 
-const { menu, medsos, ecommerce } = dataConstant.footer;
+const { medsos, ecommerce } = dataConstant.footer;
 
-export default function index() {
+export default function index({ directs }) {
+	const menu = dataConstant.navbar.map((elemen, index) => {
+		return { ...elemen, directs: directs[index] };
+	});
+
 	return (
 		<footer className="p-4 mx-auto bg-white sm:p-6 max-w-7xl">
 			<div className="md:flex md:justify-between">
@@ -34,29 +39,33 @@ export default function index() {
 					></iframe>
 				</div>
 				<div className="grid w-full grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 sm:pl-8">
-					<div>
+					<div className="font-poopins">
 						<h2 className="mb-6 font-semibold text-gray-500 uppercase">Menu</h2>
-						<ul className="text-gray-600 dark:text-gray-400">
-							{menu.map(({ name, href }, index) => (
-								<li className="mb-4" key={index}>
-									<Link href={href} className="hover:text-black-cstm-1">
-										{name}
-									</Link>
+						<ul>
+							{menu.map((item, index) => (
+								<li
+									key={index}
+									onClick={() => {
+										scrollToSection(item.directs);
+									}}
+									className="py-2 text-sm font-light text-gray-400 list-none cursor-pointer hover:text-black-cstm-1"
+								>
+									{item.name}
 								</li>
 							))}
 						</ul>
 					</div>
-					<div>
+					<div className="font-poopins">
 						<h2 className="mb-6 text-sm font-semibold text-gray-500 uppercase">
 							Media Social
 						</h2>
-						<ul className="text-gray-600 dark:text-gray-400">
+						<ul>
 							{medsos.map(({ name, href }, index) => (
 								<li className="mb-4" key={index}>
 									<a
 										href={href}
 										target="_blank"
-										className="hover:text-blue-900"
+										className="py-2 text-sm font-light text-gray-400 list-none cursor-pointer hover:text-black-cstm-1"
 									>
 										{name}
 									</a>
@@ -64,17 +73,17 @@ export default function index() {
 							))}
 						</ul>
 					</div>
-					<div>
+					<div className="font-poopins">
 						<h2 className="mb-6 text-sm font-semibold text-gray-500 uppercase">
 							E-Commerce
 						</h2>
-						<ul className="text-gray-600 dark:text-gray-400">
+						<ul>
 							{ecommerce.map(({ name, href }, index) => (
 								<li className="mb-4" key={index}>
 									<a
 										href={href}
 										target="_blank"
-										className="hover:text-blue-900"
+										className="py-2 text-sm font-light text-gray-400 list-none cursor-pointer hover:text-black-cstm-1"
 									>
 										{name}
 									</a>
@@ -84,13 +93,9 @@ export default function index() {
 					</div>
 				</div>
 			</div>
-			<hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-400 lg:my-8" />
-			<span className="block text-sm text-center text-gray-500">
-				© 2022{" "}
-				<a href="https://flowbite.com/" className="hover:underline">
-					PT. KGB
-				</a>
-				. All Rights Reserved.
+			<hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
+			<span className="block text-xs tracking-wider text-center text-gray-400 font-poopins">
+				All Rights Reserved PT. Kurnia Gemilang Bersama © 2022
 			</span>
 		</footer>
 	);

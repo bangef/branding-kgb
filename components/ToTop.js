@@ -6,14 +6,14 @@ export default function ToTop() {
 		<a
 			href={dataConstant.linkWa}
 			target="_blank"
-			className="z-50 block bg-transparant shadow-lg fixed right-[15px] bottom-[20px] font-xs rounded-full text-white p-2 text-sm font-poopins hover:opacity-80 transition-all ease-in delay-150"
+			className="z-50 block bg-transparant fixed right-[15px] bottom-[20px] font-xs rounded-full text-white p-2 text-sm font-poopins opacity-50 transition-all ease-in delay-150 hover:scale-150 hover:opacity-100"
 		>
 			<Image
 				src="/whatsapp.png"
-				width={36}
-				height={36}
+				width={50}
+				height={50}
 				alt="icon whatsapp"
-				className="hover:scale-150 animate-bounce"
+				className="animate-bounce"
 			/>
 		</a>
 	);

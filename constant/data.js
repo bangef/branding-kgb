@@ -38,14 +38,23 @@ const dataConstant = {
 			{ name: "Contact", href: "/contact" },
 		],
 		medsos: [
-			{ name: "Instagram", href: "https://www.loremipsum.com" },
-			{ name: "Facebook", href: "https://www.loremipsum.com" },
-			{ name: "Tik-Tok", href: "https://www.loremipsum.com" },
+			{
+				name: "Instagram",
+				href: "https://www.instagram.com/uniformofficialstore/",
+			},
+			{
+				name: "Facebook",
+				href: "https://www.facebook.com/uniformofficialstore/",
+			},
+			{
+				name: "Tik-Tok",
+				href: "https://www.tiktok.com/@uniformofficialstore",
+			},
 		],
 		ecommerce: [
-			{ name: "Shopee", href: "https://www.loremipsum.com" },
-			{ name: "Tokopedia", href: "https://www.loremipsum.com" },
-			{ name: "Lazada", href: "https://www.loremipsum.com" },
+			{ name: "Shopee", href: "https://www.shopee.co.id/kgb_uniform" },
+			{ name: "Tokopedia", href: "https://www.tokopedia.com/kgb_uniform" },
+			{ name: "Lazada", href: "https://www.lazada.co.id/shop/kgb_uniform" },
 		],
 	},
 };
